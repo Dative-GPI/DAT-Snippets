@@ -1,0 +1,27 @@
+{
+  "name": "dat-snippets",
+  "displayName": "Dat-Snippets",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "scripts": {
+    "generate": "node generate-snippet.js"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "csharp",
+        "path": "./snippets/snippets-csharp.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets-typescript.code-snippets"
+      }
+    ]
+  }
+}
