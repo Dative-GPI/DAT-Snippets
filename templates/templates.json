@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Shell View Model",
+        "prefix": "shellviewmodel",
+        "description": "View Model pour le projet Shell",
+        "language": "csharp",
+        "template": "./DatFoundation/ShellViewModel.cs"
+    }
+]

@@ -3,6 +3,7 @@
   "displayName": "Dat-Snippets",
   "description": "",
   "version": "0.0.1",
+  "type": "module",
   "engines": {
     "vscode": "^1.72.0"
   },
@@ -10,7 +11,7 @@
     "Snippets"
   ],
   "scripts": {
-    "generate": "node generate-snippet.js"
+    "generate": "node main.js"
   },
   "contributes": {
     "snippets": [

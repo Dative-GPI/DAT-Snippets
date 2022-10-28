@@ -1,32 +1,9 @@
 const fs = require('node:fs');
 const readline = require('readline');
 
-// TODO : should work but autocompletion is somehow bugged
-// function fsCompleter(input) {
-//     const lastSlashIndex = input.lastIndexOf('/');
-//     const pathToDir = lastSlashIndex >= 0 ? input.substring(0, lastSlashIndex) : ".";
-//     const filter = input.substring(lastSlashIndex + 1);
-
-//     try {
-//         const elementsInDir = fs.readdirSync(pathToDir, { withFileTypes: true });
-//         const hits = elementsInDir.filter(f => f.name.startsWith(filter));
-//         console.log(hits);
-    
-//         if (hits.length === 1) {
-//             rl.line = `${pathToDir}/${hits[0].name}` + (hits[0].isDirectory() ? "/" : "");
-//             rl.cursor = rl.line.length + 1;
-//         }
-    
-//         return [hits.map(h => h.name), input];
-//     } catch {
-//         return [[], input];
-//     }
-// }
-
 const rl = readline.createInterface({
     input: process.stdin,
-    output: process.stdout,
-    // completer: fsCompleter
+    output: process.stdout
 });
 
 const snippetFile = (language) => `./snippets/snippets-${language}.code-snippets`;
@@ -40,6 +17,22 @@ let fileToTransform;
 let fileData;
 
 let snippetsData;
+
+
+// Maybe use commander or yargs to make all of this cleaner
+function checkForTemplateArg() {
+    const templateArgIndex = process.argv.indexOf("--template");
+    if (templateArgIndex >= 0 && process.argv.length > templateArgIndex + 1) {
+        fileToTransform = process.argv[templateArgIndex + 1];
+    }
+}
+
+function checkForNameArg() {
+    const templateArgIndex = process.argv.indexOf("--name");
+    if (templateArgIndex >= 0 && process.argv.length > templateArgIndex + 1) {
+        fileToTransform = process.argv[templateArgIndex + 1];
+    }
+}
 
 
 function askForSnippetName() {
@@ -80,10 +73,13 @@ function askForSnippetLanguage() {
 
 function askForPath() {
     return new Promise((res, rej) => {
-        rl.question('Enter the path to the file to convert to a snippet: ', path => {
-            fileToTransform = path;
-            res(path);
-        });
+        if (!!fileToTransform) res(fileToTransform);
+        else {
+            rl.question('Enter the path to the file to convert to a snippet: ', path => {
+                fileToTransform = path;
+                res(path);
+            });
+        }
     });
 }
 
@@ -132,11 +128,17 @@ function generateSnippets() {
     })
 }
 
+function gracefulExit() {
+    console.log("Snippet generated");
+    process.exit();
+}
+
 function handleError(error) {
     console.log(error);
     process.exit(1);
 }
 
+checkForTemplateArg();
 askForSnippetName()
     .then(askForSnippetPrefix, handleError)
     .then(askForSnippetDescription, handleError)
@@ -145,4 +147,4 @@ askForSnippetName()
     .then(readFile, handleError)
     .then(readSnippets, handleError)
     .then(generateSnippets, handleError)
-    .then(_ => process.exit(), handleError);
+    .then(gracefulExit, handleError);
