@@ -1,7 +1,7 @@
 {
   "name": "dat-snippets",
   "displayName": "Dat-Snippets",
-  "description": "",
+  "description": "Standard Snippets used by the Dative team. Also includes a snippet generator.",
   "version": "0.0.1",
   "type": "module",
   "engines": {

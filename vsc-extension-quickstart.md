@@ -1,10 +1,10 @@
-# Welcome to your VS Code Extension
+# Dat'Snippets
 
 ## What's in the folder
 
-* This folder contains all of the files necessary for your extension.
-* `package.json` - this is the manifest file that defines the location of the snippet file and specifies the language of the snippets.
-* `snippets/snippets.code-snippets` - the file containing all snippets.
+* This folder contains all of the files necessary to create our snippets.
+* `package.json` - this is the manifest file that defines the location of the snippet files and specifies the language of the snippets.
+* `snippets/*.code-snippets` - the files containing all snippets.
 
 ## Get up and running straight away
 
@@ -19,13 +19,13 @@
 
 ## Generate snippets from templates
 
-* You can generate snippets from a template using the `npm run generate` command.
-* You will be asked to provide a name, a prefix, a description and a language for your new snippet.
-* You will then have to provide the path to your template written in a TextMate snippet format.
-* Templates are usually found in the `templates` folder.
-* You can also update existing templates that way by entering an existing name.
+* Add your templates to the *templates* folder.
+* Update the *templates.json* file to add your new template.
+* Generate snippets using the `npm run generate` command.
+* All snippets in the *templates.json* file will be generated.
 
 ## Install your extension
 
 * To start using your extension with Visual Studio Code copy it into the `<user home>/.vscode/extensions` folder and restart Code.
+* *Note:* only the *package.json* file and the *snippets* folder are actually necessary.
 * To share your extension with the world, read on https://code.visualstudio.com/docs about publishing an extension.

@@ -5,5 +5,75 @@
         "description": "View Model pour le projet Shell",
         "language": "csharp",
         "template": "./DatFoundation/ShellViewModel.cs"
+    },
+    {
+        "name": "Create Command (Dat'Foundation)",
+        "prefix": "createcommand",
+        "description": "Commande Create pour Dat'Foundation",
+        "language": "csharp",
+        "template": "./DatFoundation/Requests/CreateCommand.cs"
+    },
+    {
+        "name": "Update Command (Dat'Foundation)",
+        "prefix": "updatecommand",
+        "description": "Command Update pour Dat'Foundation",
+        "language": "csharp",
+        "template": "./DatFoundation/Requests/UpdateCommand.cs"
+    },
+    {
+        "name": "Remove Command (Dat'Foundation)",
+        "prefix": "removecommand",
+        "description": "Commande Remove pour Dat'Foundation",
+        "language": "csharp",
+        "template": "./DatFoundation/Requests/RemoveCommand.cs"
+    },
+    {
+        "name": "Get Query (Dat'Foundation)",
+        "prefix": "getquery",
+        "description": "Requete Get pour Dat'Foundation",
+        "language": "csharp",
+        "template": "./DatFoundation/Requests/GetQuery.cs"
+    },
+    {
+        "name": "GetMany Query (Dat'Foundation)",
+        "prefix": "getmanyquery",
+        "description": "Requete GetMany pour Dat'Foundation",
+        "language": "csharp",
+        "template": "./DatFoundation/Requests/GetManyQuery.cs"
+    },
+    {
+        "name": "Create CommandHandler (Dat'Foundation)",
+        "prefix": "createcommandhandler",
+        "description": "CreateCommandHandler pour Dat'Foundation",
+        "language": "csharp",
+        "template": "./DatFoundation/Handlers/CreateCommandHandler.cs"
+    },
+    {
+        "name": "Update CommandHandler (Dat'Foundation)",
+        "prefix": "updatecommandhandler",
+        "description": "UpdateCommandHandler pour Dat'Foundation",
+        "language": "csharp",
+        "template": "./DatFoundation/Handlers/UpdateCommandHandler.cs"
+    },
+    {
+        "name": "Remove CommandHandler (Dat'Foundation)",
+        "prefix": "removecommandhandler",
+        "description": "RemoveCommandHandler pour Dat'Foundation",
+        "language": "csharp",
+        "template": "./DatFoundation/Handlers/RemoveCommandHandler.cs"
+    },
+    {
+        "name": "Get QueryHandler (Dat'Foundation)",
+        "prefix": "getqueryhandler",
+        "description": "GetQueryHandler pour Dat'Foundation",
+        "language": "csharp",
+        "template": "./DatFoundation/Handlers/GetQueryHandler.cs"
+    },
+    {
+        "name": "GetMany QueryHandler (Dat'Foundation)",
+        "prefix": "getmanyqueryhandler",
+        "description": "GetManyQueryHandler pour Dat'Foundation",
+        "language": "csharp",
+        "template": "./DatFoundation/Handlers/GetManyQueryHandler.cs"
     }
 ]
