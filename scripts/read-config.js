@@ -1,6 +1,6 @@
-import { readFile } from "node:fs/promises";
-import { ConfigItem, configPath, templateFile } from "./config.js";
-import { Snippet } from "./snippet.js";
+import { readFile, writeFile } from "node:fs/promises";
+import { ConfigItem, configPath, packageJsonPath, templateFile } from "./config.js";
+import { Snippet, snippetFile } from "./snippet.js";
 
 
 export async function readConfig() {
@@ -36,5 +36,26 @@ export async function resolveSnippet(configItem) {
         configItem.language,
         templateBody.split("\n")
     )
+}
+
+
+export async function updatePackageJson(snippets) {
+    const data = await readFile(packageJsonPath, "utf8");
+    const packageData = JSON.parse(data);
+
+    const languageSet = new Set();
+    for (const snippet of snippets) {
+        languageSet.add(snippet.language);
+    }
+
+    const snippetsSection = [];
+    for (const language of languageSet) {
+        snippetsSection.push({ language: language, path: snippetFile(language) });
+    }
+
+    packageData["contributes"]["snippets"] = snippetsSection;
+    
+    const stringifiedData = JSON.stringify(packageData, null, "\t");
+    await writeFile(packageJsonPath, stringifiedData, "utf8");
 }
 

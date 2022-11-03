@@ -1,6 +1,8 @@
 import * as path from "node:path";
 
 
+export const packageJsonPath = "./package.json";
+
 export const configPath = "./templates/templates.json";
 export const templateFile = (templatePath) => path.join("./templates", templatePath); 
 

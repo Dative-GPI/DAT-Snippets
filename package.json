@@ -1,28 +1,24 @@
 {
-  "name": "dat-snippets",
-  "displayName": "Dat-Snippets",
-  "description": "Standard Snippets used by the Dative team. Also includes a snippet generator.",
-  "version": "0.0.1",
-  "type": "module",
-  "engines": {
-    "vscode": "^1.72.0"
-  },
-  "categories": [
-    "Snippets"
-  ],
-  "scripts": {
-    "generate": "node main.js"
-  },
-  "contributes": {
-    "snippets": [
-      {
-        "language": "csharp",
-        "path": "./snippets/snippets-csharp.code-snippets"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/snippets-typescript.code-snippets"
-      }
-    ]
-  }
+	"name": "dat-snippets",
+	"displayName": "Dat-Snippets",
+	"description": "Standard Snippets used by the Dative team. Also includes a snippet generator.",
+	"version": "0.0.1",
+	"type": "module",
+	"engines": {
+		"vscode": "^1.72.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"scripts": {
+		"generate": "node main.js"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"language": "csharp",
+				"path": "./snippets/snippets-csharp.code-snippets"
+			}
+		]
+	}
 }
