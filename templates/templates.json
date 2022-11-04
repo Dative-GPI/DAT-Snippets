@@ -75,5 +75,12 @@
         "description": "GetManyQueryHandler pour Dat'Foundation",
         "language": "csharp",
         "template": "./DatFoundation/Handlers/GetManyQueryHandler.cs"
+    },
+    {
+        "name": "Couchbase Repository (Dat'Acquisition)",
+        "prefix": "couchbaserepository",
+        "description": "Repository Couchbase pour Dat'Acquisition",
+        "language": "csharp",
+        "template": "./DatAcquisition/CouchbaseRepository.cs"
     }
 ]
