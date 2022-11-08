@@ -76,11 +76,26 @@
         "language": "csharp",
         "template": "./DatFoundation/Handlers/GetManyQueryHandler.cs"
     },
+
     {
         "name": "Couchbase Repository (Dat'Acquisition)",
         "prefix": "couchbaserepository",
         "description": "Repository Couchbase pour Dat'Acquisition",
         "language": "csharp",
         "template": "./DatAcquisition/CouchbaseRepository.cs"
+    },
+    {
+        "name": "Create Command Handler (Dat'Acquisition)",
+        "prefix": "createcommandhandler",
+        "description": "CreateCommandHandler pour Dat'Acquisition",
+        "language": "csharp",
+        "template": "./DatAcquisition/Handlers/CreateCommandHandler.cs"
+    },
+    {
+        "name": "Update Command Handler (Dat'Acquisition)",
+        "prefix": "updatecommandhandler",
+        "description": "UpdateCommandHandler pour Dat'Acquisition",
+        "language": "csharp",
+        "template": "./DatAcquisition/Handlers/UpdateCommandHandler.cs"
     }
 ]
