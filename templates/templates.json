@@ -97,5 +97,26 @@
         "description": "UpdateCommandHandler pour Dat'Acquisition",
         "language": "csharp",
         "template": "./DatAcquisition/Handlers/UpdateCommandHandler.cs"
+    },
+    {
+        "name": "Vue Component",
+        "prefix": "vuecomponent",
+        "description": "A standard Vue Component",
+        "language": "vue",
+        "template": "./common/VueComponent.vue"
+    },
+    {
+        "name": "Vue fetch",
+        "prefix": "vuefetch",
+        "description": "Mounted and fetch methods for Vue Components",
+        "language": "vue",
+        "template": "./common/VueFetch.vue"
+    },
+    {
+        "name": "Typescript Service",
+        "prefix": "tsservice",
+        "description": "A standard Typescript service",
+        "language": "typescript",
+        "template": "./common/tsService.ts"
     }
 ]

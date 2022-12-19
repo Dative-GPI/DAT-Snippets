@@ -1,0 +1,20 @@
+<template>
+    <div>
+        Hello World !
+    </div>
+</template>
+
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
+
+@Component({})
+export default class $TM_FILENAME_BASE extends Vue {
+    // Properties
+    // Data
+    // Computed Properties
+    // Methods
+    // Watchers
+}
+</script>
+
+<style scoped></style>

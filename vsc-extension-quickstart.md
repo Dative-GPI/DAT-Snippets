@@ -26,6 +26,9 @@
 
 ## Install your extension
 
-* To start using your extension with Visual Studio Code copy it into the `<user home>/.vscode/extensions` folder and restart Code.
-* *Note:* only the *package.json* file and the *snippets* folder are actually necessary.
-* To share your extension with the world, read on https://code.visualstudio.com/docs about publishing an extension.
+* Install `vsce` using this command: `npm install -g @vscode/vsce` (it will be installed globally)
+* Once `vsce` is installed, you can package your extension using this command: `vsce package`
+* This will generate a *.vsix* file
+* In VSCode, in the Extensions panel, click on the `...` on the top right corner.
+* Click on *Install from VSIX...*, then select the file you just generated
+* To share your extension with the world, read on https://code.visualstudio.com/api/working-with-extensions/publishing-extension#vsce about publishing an extension.

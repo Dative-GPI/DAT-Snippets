@@ -4,6 +4,10 @@
 	"description": "Standard Snippets used by the Dative team. Also includes a snippet generator.",
 	"version": "0.0.1",
 	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Dative-GPI/DAT-Snippets"
+	},
 	"engines": {
 		"vscode": "^1.72.0"
 	},
@@ -18,6 +22,14 @@
 			{
 				"language": "csharp",
 				"path": "./snippets/snippets-csharp.code-snippets"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/snippets-vue.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/snippets-typescript.code-snippets"
 			}
 		]
 	}
