@@ -564,5 +564,12 @@
 			"    }",
 			"}"
 		]
+	},
+	"UUID": {
+		"prefix": "uuid",
+		"description": "Insert a auto-generated UUID",
+		"body": [
+			"${UUID}"
+		]
 	}
 }

@@ -109,7 +109,7 @@
         "name": "Vue fetch",
         "prefix": "vuefetch",
         "description": "Mounted and fetch methods for Vue Components",
-        "language": "vue",
+        "language": "typescript",
         "template": "./common/VueFetch.vue"
     },
     {
@@ -118,5 +118,12 @@
         "description": "A standard Typescript service",
         "language": "typescript",
         "template": "./common/tsService.ts"
+    },
+    {
+        "name": "UUID",
+        "prefix": "uuid",
+        "description": "Insert a auto-generated UUID",
+        "language": "csharp",
+        "template": "./common/uuid.txt"
     }
 ]

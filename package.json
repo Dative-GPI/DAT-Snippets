@@ -3,6 +3,8 @@
 	"displayName": "Dat-Snippets",
 	"description": "Standard Snippets used by the Dative team. Also includes a snippet generator.",
 	"version": "0.0.1",
+	"author": "Dative Dev Team",
+	"publisher": "Dative - GPI",
 	"type": "module",
 	"repository": {
 		"type": "git",
